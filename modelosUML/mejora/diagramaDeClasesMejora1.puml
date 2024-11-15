@@ -1,4 +1,4 @@
-@startuml diagramaDeClasesUML
+@startuml diagramaDeClasesMejora1
 
 class InicioDeSesión {
     correo
@@ -7,9 +7,11 @@ class InicioDeSesión {
 
 class Usuario {
     nombre
+    controlParental
 }
 
-class MenúPrincipal {
+class Recomendaciones {
+    listaDeVideos
     categoría
 }
 
@@ -19,12 +21,13 @@ class Buscador {
 
 class Video {
     resolución
-    tipo
     nombre
+    tipo
 }
 
 class PistaDeAudio {
     idioma
+    calidad
 }
 
 class Subtítulos {
@@ -38,28 +41,34 @@ class AjustesDeCuenta {
     idioma
     región
     conexión
-    método_de_pago
+    métodoDePago
+    calidadDeStreaming
 }
 
 class Watchlist {
-    lista
+    listaDeVideos
 }
 
 class Suscripción {
     plan
+    dispositivosPermitidos
 }
 
 InicioDeSesión --> Usuario : inicia sesión
-Usuario --> MenúPrincipal : accede
-MenúPrincipal --> Watchlist : utiliza
-MenúPrincipal -- AjustesDeCuenta : accede
-MenúPrincipal --> Buscador : utiliza
-MenúPrincipal --> Video : accede
+Usuario --> Recomendaciones : accede
+Usuario --> Watchlist : utiliza
+Usuario -- AjustesDeCuenta : configura
+Usuario --> Buscador : utiliza
+Usuario --> Video : reproduce
+
+Recomendaciones --> Video : incluye
+Watchlist --> Video : contiene
+Buscador --> Video : encuentra
+
 Video -- PistaDeAudio : tiene
 Video -- Subtítulos : tiene
 Video --> Suscripción : depende
-AjustesDeCuenta --> Suscripción : tiene
-Buscador --> Video : accede
-Watchlist --> Video : accede
+
+AjustesDeCuenta --> Suscripción : gestiona
 
 @enduml

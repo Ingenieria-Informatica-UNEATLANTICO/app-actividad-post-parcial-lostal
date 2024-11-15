@@ -4,7 +4,7 @@ Este repositorio contiene la entrega del examen correspondiente a la asignatura 
 
 ---
 
-### 1. **Examen entregado**
+### 1: **Examen entregado**
 
 | Diagrama              | Imagen                          |
 |-----------------------|----------------------------------|
@@ -14,21 +14,41 @@ Este repositorio contiene la entrega del examen correspondiente a la asignatura 
 
 ---
 
-### 2. **Examen pasado a UML**
+### 2: **Examen pasado a UML**
 
 | Diagrama              | Ver SVG                          | Ver Código                          |
 |-----------------------|-----------------------------------|-------------------------------------|
-| Diagrama de Clases    | ![Diagrama de Clases](/images/svg/examen/DiagramaDeClasesExamen.svg) | [Ver Código](/modelosUML/examen/diagramaDeClasesUML.puml) |
-| Diagrama de Objetos   | ![Diagrama de Objetos](/images/svg/examen/diagramaDeObjetosExamen.svg) | [Ver Código](/modelosUML/examen/diagramaDeObjetosUML.puml) |
-| Diagrama de Estados   | ![Diagrama de Estados](/images/svg/examen/diagramaDeEstadosExamen.svg) | [Ver Código](/modelosUML/examen/diagramaDeEstadosUML.puml) |
+| Diagrama de Clases    | ![Diagrama de Clases](/images/svg/examen/DiagramaDeClasesExamen.svg) | [Ver Código](/modelosUML/examen/diagramaDeClasesExamen.puml) |
+| Diagrama de Objetos   | ![Diagrama de Objetos](/images/svg/examen/diagramaDeObjetosExamen.svg) | [Ver Código](/modelosUML/examen/diagramaDeObjetosExamen.puml) |
+| Diagrama de Estados   | ![Diagrama de Estados](/images/svg/examen/diagramaDeEstadosExamen.svg) | [Ver Código](/modelosUML/examen/diagramaDeEstadosExamen.puml) |
 
 
 ---
 
-### 3. **Primera iteración**
+### 3.1: **Diagrama de clases**  
+#### **Primera iteración**  
 
-| Diagrama              | Ver SVG                           | Ver Código                          |
-|-----------------------|-----------------------------------|-------------------------------------|
-| Diagrama de Clases    | ![Diagrama de Clases]()           | [Ver Código]()                      |
-| Diagrama de Objetos   | ![Diagrama de Objetos]()          | [Ver Código]()                      |
-| Diagrama de Estados   | ![Diagrama de Estados]()          | [Ver Código]()                      |
+| Ver SVG                           | Ver Código                          |
+|-----------------------------------|-------------------------------------|
+| ![Diagrama de Clases](/images/svg/mejora/diagramaDeClasesMejora1.svg) | [Ver Código](/modelosUML/mejora/diagramaDeClasesMejora1.puml) |
+
+**Comentarios**:  
+Cambiado "MenúPrincipal" por "Recomendaciones", añadidos atributos `listaDeVideos` y `categoría`. Simplificados atributos eliminando `DRM` y `tipoDeUsuario`. Relación `Usuario --> Recomendaciones` actualizada. Uniformados nombres como `métodoDePago`. Relación y estructura general optimizadas.
+
+
+### 3.2: **Diagrama de objetos**
+#### **Primera iteración**
+
+| Ver SVG                           | Ver Código                          |
+|-----------------------------------|-------------------------------------|
+| ![Diagrama de Objetos](/images/svg/mejora/diagramaDeEstadosMejora1.svg)           | [Ver Código](/modelosUML/mejora/diagramaDeObjetosMejora1.puml)                      |
+
+### 3.3: **Diagrama de estados**
+#### **Primera iteración**
+
+| Ver SVG                           | Ver Código                          |
+|-----------------------------------|-------------------------------------|
+| ![Diagrama de Estados](/images/svg/mejora/diagramaDeEstadosMejora1.svg)           | [Ver Código](/modelosUML/mejora/diagramaDeEstadosMejora1.puml)                      |
+
+**Comentarios**:  
+Añadidos estados `Reproducción` y `AjustesDeCuenta`. Mejoradas transiciones con condiciones claras como `Credenciales válidas`, `Registro exitoso`, y `Cerrar sesión`. Flujo optimizado manteniendo un estado final `[*]` para reflejar la salida completa.

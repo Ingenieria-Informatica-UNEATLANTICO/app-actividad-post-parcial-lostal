@@ -1,4 +1,4 @@
-@startuml diagramaDeClasesUML
+@startuml diagramaDeClasesExamen
 
 object InicioDeSesión {
     correo = "josemanuel@gmail.com"

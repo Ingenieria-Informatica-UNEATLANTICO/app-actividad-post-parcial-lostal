@@ -1,4 +1,4 @@
-@startuml diagramaDeEstadosUML
+@startuml diagramaDeEstadosExamen
 
 [*] --> SinAcceso
 
@@ -7,5 +7,7 @@ SinAcceso --> Registro
 Registro --> InicioDeSesión
 InicioDeSesión --> SelecciónDeUsuario
 SelecciónDeUsuario --> AccesoAContenidos
+
+AccesoAContenidos --> [*]
 
 @enduml
