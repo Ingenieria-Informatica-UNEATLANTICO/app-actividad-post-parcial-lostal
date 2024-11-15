@@ -35,6 +35,15 @@ Este repositorio contiene la entrega del examen correspondiente a la asignatura 
 **Comentarios**:  
 Cambiado "MenúPrincipal" por "Recomendaciones", añadidos atributos `listaDeVideos` y `categoría`. Simplificados atributos eliminando `DRM` y `tipoDeUsuario`. Relación `Usuario --> Recomendaciones` actualizada. Uniformados nombres como `métodoDePago`. Relación y estructura general optimizadas.
 
+#### **Segunda iteración**
+
+| Ver SVG                           | Ver Código                          |
+|-----------------------------------|-------------------------------------|
+| ![Diagrama de Clases](/images/svg/mejora/diagramaDeClasesMejora2.svg) | [Ver Código](/modelosUML/mejora/diagramaDeClasesMejora2.puml) |
+
+**Comentarios**:  
+Añadidas cardinalidades a todas las relaciones para especificar multiplicidades.
+
 
 ### 3.2: **Diagrama de objetos**
 #### **Primera iteración**
@@ -42,6 +51,18 @@ Cambiado "MenúPrincipal" por "Recomendaciones", añadidos atributos `listaDeVid
 | Ver SVG                           | Ver Código                          |
 |-----------------------------------|-------------------------------------|
 | ![Diagrama de Objetos](/images/svg/mejora/diagramaDeObjetosMejora1.svg)           | [Ver Código](/modelosUML/mejora/diagramaDeObjetosMejora1.puml)                      |
+
+**Comentarios**:  
+Cambios similares a la primera iteración del diagrama de clases para mantener la coherencia.
+
+#### **Segunda iteración**
+
+| Ver SVG                           | Ver Código                          |
+|-----------------------------------|-------------------------------------|
+| ![Diagrama de Objetos](/images/svg/mejora/diagramaDeObjetosMejora2.svg)           | [Ver Código](/modelosUML/mejora/diagramaDeObjetosMejora2.puml)                      |
+
+**Comentarios**:  
+Cambios similares a la segunda iteración del diagrama de clases para mantener la coherencia.
 
 ### 3.3: **Diagrama de estados**
 #### **Primera iteración**
