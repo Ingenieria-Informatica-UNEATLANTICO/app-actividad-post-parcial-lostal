@@ -41,7 +41,7 @@ Cambiado "MenúPrincipal" por "Recomendaciones", añadidos atributos `listaDeVid
 
 | Ver SVG                           | Ver Código                          |
 |-----------------------------------|-------------------------------------|
-| ![Diagrama de Objetos](/images/svg/mejora/diagramaDeEstadosMejora1.svg)           | [Ver Código](/modelosUML/mejora/diagramaDeObjetosMejora1.puml)                      |
+| ![Diagrama de Objetos](/images/svg/mejora/diagramaDeObjetosMejora1.svg)           | [Ver Código](/modelosUML/mejora/diagramaDeObjetosMejora1.puml)                      |
 
 ### 3.3: **Diagrama de estados**
 #### **Primera iteración**
