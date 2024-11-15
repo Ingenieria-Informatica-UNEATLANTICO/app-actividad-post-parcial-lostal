@@ -1,0 +1,74 @@
+@startuml diagramaDeObjetosMejora2
+
+object InicioDeSesión {
+    correo = "josemanuel@gmail.com"
+    contraseña = "nombreDeMiPerro"
+}
+
+object Usuario {
+    nombre = "Jose"
+    controlParental = false
+}
+
+object Recomendaciones {
+    listaDeVideos = ["The Penguin", "The Batman", "The Joker"]
+    categoría = "Drama"
+}
+
+object Buscador {
+    búsqueda = "interest"
+}
+
+object Video {
+    resolución = "4K"
+    nombre = "Interestelar"
+    tipo = "Película"
+}
+
+object PistaDeAudio {
+    idioma = "Inglés"
+    calidad = "Dolby Atmos"
+}
+
+object Subtítulos {
+    idioma = "Español"
+    color = "Blanco"
+    tamaño = "Mediano"
+    fuente = "Arial"
+}
+
+object AjustesDeCuenta {
+    idioma = "Español"
+    región = "Europa"
+    conexión = "Datos móviles"
+    métodoDePago = "VISA"
+    calidadDeStreaming = "4K"
+}
+
+object Watchlist {
+    listaDeVideos = ["Baby Driver", "Taxi Driver", "Drive"]
+}
+
+object Suscripción {
+    plan = "Premium"
+    dispositivosPermitidos = 4
+}
+
+InicioDeSesión "1" --> "1" Usuario : inicia sesión
+Usuario "1" --> "1..*" Recomendaciones : accede
+Usuario "1" --> "1" Watchlist : utiliza
+Usuario "1" -- "1" AjustesDeCuenta : configura
+Usuario "1" --> "1" Buscador : utiliza
+Usuario "1" --> "0..*" Video : reproduce
+
+Recomendaciones "1" --> "1..*" Video : incluye
+Watchlist "1" --> "0..*" Video : contiene
+Buscador "1" --> "1..*" Video : encuentra
+
+Video "1" -- "1..*" PistaDeAudio : tiene
+Video "1" -- "0..*" Subtítulos : tiene
+Video "1" --> "1" Suscripción : depende
+
+AjustesDeCuenta "1" --> "1" Suscripción : gestiona
+
+@enduml

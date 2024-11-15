@@ -1,0 +1,74 @@
+@startuml diagramaDeObjetosMejora1
+
+object InicioDeSesión {
+    correo = "josemanuel@gmail.com"
+    contraseña = "nombreDeMiPerro"
+}
+
+object Usuario {
+    nombre = "Jose"
+    controlParental = false
+}
+
+object Recomendaciones {
+    listaDeVideos = ["The Penguin", "The Batman", "The Joker"]
+    categoría = "Drama"
+}
+
+object Buscador {
+    búsqueda = "interest"
+}
+
+object Video {
+    resolución = "4K"
+    nombre = "Interestelar"
+    tipo = "Película"
+}
+
+object PistaDeAudio {
+    idioma = "Inglés"
+    calidad = "Dolby Atmos"
+}
+
+object Subtítulos {
+    idioma = "Español"
+    color = "Blanco"
+    tamaño = "Mediano"
+    fuente = "Arial"
+}
+
+object AjustesDeCuenta {
+    idioma = "Español"
+    región = "Europa"
+    conexión = "Datos móviles"
+    métodoDePago = "VISA"
+    calidadDeStreaming = "4K"
+}
+
+object Watchlist {
+    listaDeVideos = ["Baby Driver", "Taxi Driver", "Drive"]
+}
+
+object Suscripción {
+    plan = "Premium"
+    dispositivosPermitidos = 4
+}
+
+InicioDeSesión --> Usuario : inicia sesión
+Usuario --> Recomendaciones : accede
+Usuario --> Watchlist : utiliza
+Usuario -- AjustesDeCuenta : configura
+Usuario --> Buscador : utiliza
+Usuario --> Video : reproduce
+
+Recomendaciones --> Video : incluye
+Watchlist --> Video : contiene
+Buscador --> Video : encuentra
+
+Video -- PistaDeAudio : tiene
+Video -- Subtítulos : tiene
+Video --> Suscripción : depende
+
+AjustesDeCuenta --> Suscripción : gestiona
+
+@enduml

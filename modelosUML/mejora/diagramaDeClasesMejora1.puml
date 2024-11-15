@@ -1,0 +1,74 @@
+@startuml diagramaDeClasesMejora1
+
+class InicioDeSesión {
+    correo
+    contraseña
+}
+
+class Usuario {
+    nombre
+    controlParental
+}
+
+class Recomendaciones {
+    listaDeVideos
+    categoría
+}
+
+class Buscador {
+    búsqueda
+}
+
+class Video {
+    resolución
+    nombre
+    tipo
+}
+
+class PistaDeAudio {
+    idioma
+    calidad
+}
+
+class Subtítulos {
+    idioma
+    color
+    tamaño
+    fuente
+}
+
+class AjustesDeCuenta {
+    idioma
+    región
+    conexión
+    métodoDePago
+    calidadDeStreaming
+}
+
+class Watchlist {
+    listaDeVideos
+}
+
+class Suscripción {
+    plan
+    dispositivosPermitidos
+}
+
+InicioDeSesión --> Usuario : inicia sesión
+Usuario --> Recomendaciones : accede
+Usuario --> Watchlist : utiliza
+Usuario -- AjustesDeCuenta : configura
+Usuario --> Buscador : utiliza
+Usuario --> Video : reproduce
+
+Recomendaciones --> Video : incluye
+Watchlist --> Video : contiene
+Buscador --> Video : encuentra
+
+Video -- PistaDeAudio : tiene
+Video -- Subtítulos : tiene
+Video --> Suscripción : depende
+
+AjustesDeCuenta --> Suscripción : gestiona
+
+@enduml

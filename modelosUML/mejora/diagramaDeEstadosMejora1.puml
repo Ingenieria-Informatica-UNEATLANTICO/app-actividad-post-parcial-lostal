@@ -1,0 +1,23 @@
+@startuml diagramaDeEstadosMejora1
+
+[*] --> SinAcceso
+
+SinAcceso --> InicioDeSesión : "Usuario existente"
+SinAcceso --> Registro : "Nuevo usuario"
+
+Registro --> InicioDeSesión : "Registro exitoso"
+InicioDeSesión --> SelecciónDeUsuario : "Credenciales válidas"
+InicioDeSesión --> SinAcceso : "Credenciales inválidas"
+
+SelecciónDeUsuario --> AccesoAContenidos : "Usuario seleccionado"
+
+AccesoAContenidos --> Reproducción : "Seleccionar video"
+AccesoAContenidos --> AjustesDeCuenta : "Modificar ajustes"
+
+Reproducción --> AccesoAContenidos : "Finalizar reproducción"
+AjustesDeCuenta --> AccesoAContenidos : "Guardar cambios"
+
+AccesoAContenidos --> SinAcceso : "Cerrar sesión"
+AccesoAContenidos --> [*] : "Salir del sistema"
+
+@enduml
