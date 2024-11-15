@@ -1,0 +1,65 @@
+@startuml diagramaDeClasesUML
+
+object InicioDeSesión {
+    correo = "josemanuel@gmail.com"
+    contraseña = "nombreDeMiPerro"
+}
+
+object Usuario {
+    nombre = "Jose"
+}
+
+object MenúPrincipal {
+    categoría = "Ciencia Ficción"
+}
+
+object Buscador {
+    búsqueda = "interest"
+}
+
+object Video {
+    resolución = "4K"
+    tipo = "película"
+    nombre = "Interestelar"
+}
+
+object PistaDeAudio {
+    idioma = "inglés"
+}
+
+object Subtítulos {
+    idioma = "español"
+    color = "blanco"
+    tamaño = "12px"
+    fuente = "arial"
+}
+
+object AjustesDeCuenta {
+    idioma = "español"
+    región = "Europa"
+    conexión = "Datos móviles"
+    método_de_pago = "VISA"
+}
+
+object Watchlist {
+    lista = ["Baby Driver", "Taxi Driver", "Drive"]
+}
+
+object Suscripción {
+    plan = "premium"
+}
+
+InicioDeSesión --> Usuario : inicia sesión
+Usuario --> MenúPrincipal : accede
+MenúPrincipal --> Watchlist : utiliza
+MenúPrincipal -- AjustesDeCuenta : accede
+MenúPrincipal --> Buscador : utiliza
+MenúPrincipal --> Video : accede
+Video -- PistaDeAudio : tiene
+Video -- Subtítulos : tiene
+Video --> Suscripción : depende
+AjustesDeCuenta --> Suscripción : tiene
+Buscador --> Video : accede
+Watchlist --> Video : accede
+
+@enduml

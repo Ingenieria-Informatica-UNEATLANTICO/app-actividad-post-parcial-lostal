@@ -1,0 +1,11 @@
+@startuml diagramaDeEstadosUML
+
+[*] --> SinAcceso
+
+SinAcceso --> InicioDeSesión
+SinAcceso --> Registro
+Registro --> InicioDeSesión
+InicioDeSesión --> SelecciónDeUsuario
+SelecciónDeUsuario --> AccesoAContenidos
+
+@enduml

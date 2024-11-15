@@ -1,0 +1,65 @@
+@startuml diagramaDeClasesUML
+
+class InicioDeSesión {
+    correo
+    contraseña
+}
+
+class Usuario {
+    nombre
+}
+
+class MenúPrincipal {
+    categoría
+}
+
+class Buscador {
+    búsqueda
+}
+
+class Video {
+    resolución
+    tipo
+    nombre
+}
+
+class PistaDeAudio {
+    idioma
+}
+
+class Subtítulos {
+    idioma
+    color
+    tamaño
+    fuente
+}
+
+class AjustesDeCuenta {
+    idioma
+    región
+    conexión
+    método_de_pago
+}
+
+class Watchlist {
+    lista
+}
+
+class Suscripción {
+    plan
+}
+
+InicioDeSesión --> Usuario : inicia sesión
+Usuario --> MenúPrincipal : accede
+MenúPrincipal --> Watchlist : utiliza
+MenúPrincipal -- AjustesDeCuenta : accede
+MenúPrincipal --> Buscador : utiliza
+MenúPrincipal --> Video : accede
+Video -- PistaDeAudio : tiene
+Video -- Subtítulos : tiene
+Video --> Suscripción : depende
+AjustesDeCuenta --> Suscripción : tiene
+Buscador --> Video : accede
+Watchlist --> Video : accede
+
+@enduml
